@@ -18,7 +18,7 @@ const PlayerBarContainer = () => {
   const volumeControlsProps = useVolumeControlsProps();
   const trackDurationProp = useTrackDurationProp();
   useStreamLookup();
-
+  
   return (
     <PlayerBar
       {...seekbarProps}

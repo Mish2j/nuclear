@@ -43,12 +43,12 @@ export type PlayOptionsProps = {
 
 const PlayOptions: React.FC<PlayOptionsProps> = ({
   playOptions
-}) => (
-  <div className={styles.play_options}>
+}) => {
+  return <div className={styles.play_options}>
     {
       playOptions.map((playOption, i) => <PlayOptionControl {...playOption} key={i} />)
     }
-  </div>
-);
+  </div>;
+};
 
 export default PlayOptions;
