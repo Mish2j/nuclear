@@ -197,6 +197,7 @@ export const useVolumeControlsProps = () => {
       enabled: _.get(settings, 'rate'),
       onToggle: useToggleOptionCallback(toggleOption, 'rate', settings)
     },
+    // END
     {
       name: t('loop'),
       dataTestId: 'loop-play-option',
