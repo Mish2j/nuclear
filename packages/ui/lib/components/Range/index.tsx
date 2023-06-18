@@ -23,7 +23,6 @@ const Range = ({
   hideThumb,
   thumbColor,
   readOnly,
-  // step,
   onChange
 }) => {
   const handleChange = useCallback(
@@ -101,7 +100,6 @@ const Range = ({
           onWheel={handleWheel}
           min={min}
           max={max}
-          // step={step}
         />
       </div>
     </div>
@@ -118,7 +116,6 @@ Range.defaultProps = {
   max: 100,
   width: 300,
   value: 0,
-  // step: 1,
   onChange: () => { }
 };
 
@@ -142,7 +139,6 @@ Range.propTypes = {
   value: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   readOnly: PropTypes.bool
-  // step: PropTypes.number
 };
 
 export default Range;

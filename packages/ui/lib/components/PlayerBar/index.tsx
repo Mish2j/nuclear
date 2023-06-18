@@ -56,16 +56,10 @@ const PlayerBar: React.FC<PlayerBarProps> = ({
   seek,
   skipSegments,
   allowSkipSegment,
-  segmentPopupMessage,
-
-  // ADDED BY MISH GH
-  playbackRate,
-  updatePlaybackRate,
-  isPlaybackRateOpen
+  segmentPopupMessage
 }) => {
   const { width: windowWidth } = useWindowSize();
   const isLivestream = (isNaN(timeToEnd) || typeof timeToEnd === 'string') && (queue.queueItems.length > 0);
-
   return (
     <div className={cx(
       common.nuclear,
@@ -124,12 +118,7 @@ const PlayerBar: React.FC<PlayerBarProps> = ({
             updateVolume={updateVolume}
             toggleMute={toggleMute}
             isMuted={isMuted}
-            playOptions={playOptions}
-            // ADDED BY MISH GH
-            updatePlaybackRate={updatePlaybackRate}
-            playbackRate={playbackRate}
-            isPlaybackRateOpen={isPlaybackRateOpen}
-          />}
+            playOptions={playOptions} />}
       </div>
     </div>
   );

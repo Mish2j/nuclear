@@ -34,7 +34,7 @@ const localTrackToQueueItem = (track: LocalTrack, local: LocalLibraryState): Que
       stream: `file://${matchingLocalTrack.path}`,
       duration: matchingLocalTrack.duration
     } as TrackStream;
-    
+
   return toQueueItem({
     ...rest,
     streams: [resolvedStream]
